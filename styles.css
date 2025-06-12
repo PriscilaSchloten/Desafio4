@@ -1,0 +1,155 @@
+body {
+    background: #5694db;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #222;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background: #fff;
+    max-width: 420px;
+    width: 100%;
+    margin: 3em auto;
+    border-radius: 14px;
+    box-shadow: 0 4px 24px #0001;
+    padding: 2.5em 2em 2em 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+}
+
+h2, h3 {
+    font-size: 1.5em;
+    margin: 0 0 1.2em 0;
+    color: #1a237e;
+    letter-spacing: 1px;
+    font-weight: 700;
+    text-align: center;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+    align-items: stretch;
+}
+
+label {
+    font-size: 1em;
+    font-weight: 500;
+    color: #066bcf;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1.5px solid #a9c1df;
+    border-radius: 6px;
+    background: #fafdff;
+    font-size: 1em;
+    transition: border 0.2s, background 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #1976d2;
+    background: #fff;
+    outline: none;
+}
+
+button[type="submit"] {
+    background: #1976d2;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 0;
+    font-size: 1.08em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.18s;
+    margin-top: 8px;
+}
+
+button[type="submit"]:hover {
+    background: #0d47a1;
+}
+
+.btn-voltar {
+    display: block;
+    margin: 18px auto 0 auto;
+    padding: 10px 0;
+    width: 100%;
+    background: #e3f0ff;
+    color: #1976d2;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 1em;
+    text-align: center;
+    font-weight: 500;
+    transition: background 0.18s, color 0.18s;
+}
+
+.btn-voltar:hover {
+    background: #1976d2;
+    color: #fff;
+}
+
+.resultado {
+    width: 100%;
+    background: #fafdff;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px #0001;
+    padding: 1.2em 1em 1em 1em;
+    margin-top: 1em;
+}
+
+ul {
+    padding-left: 18px;
+    margin: 18px 0 0 0;
+    width: 100%;
+}
+
+li {
+    margin-bottom: 7px;
+    font-size: 1em;
+}
+
+strong {
+    color: #1976d2;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 1em 0.5em;
+        max-width: 98vw;
+    }
+    h2, h3 {
+        font-size: 1.15em;
+    }
+    .resultado {
+        padding: 1em 0.5em;
+    }
+}
+/* 
+<body>
+  <div class="container">
+    <h2>Informações do Aluno</h2>
+    <form>...</form>
+    <div class="resultado">
+      <!-- Resultado do PHP aqui -->
+    </div>
+    <a href="../index.php" class="btn-voltar">Voltar para a Home</a>
+  </div>
+</body> */
