@@ -26,17 +26,26 @@ class Aluno
         return ($this->nota1 + $this->nota2 + $this->nota3) / 3;
     }
 
-    public function exibirDetalhes() {
+    public function exibirDetalhes()
+    {
         $media = $this->calcularMedia();
 
+        if ($media < 4) {
+            $status = "Reprovado";
+        } elseif ($media < 7) {
+            $status = "Recuperação";
+        } else {
+            $status = "Aprovado";
+        }
+
         return "
-        <ul>
-            <li>{$this->getResumo()}</li>
-            <li>Nota 1: " . number_format($this->nota1, 2, ',', '.') . "</li>
-            <li>Nota 2: " . number_format($this->nota2, 2, ',', '.') . "</li>
-            <li>Nota 3: " . number_format($this->nota3, 2, ',', '.') . "</li>
-            <li><strong>Média Final: " . number_format($media, 2, ',', '.') . "</strong></li>
-        </ul>
-        ";
+    <ul>
+        <li>{$this->getResumo()}</li>
+        <li>Nota 1: " . number_format($this->nota1, 2, ',', '.') . "</li>
+        <li>Nota 2: " . number_format($this->nota2, 2, ',', '.') . "</li>
+        <li>Nota 3: " . number_format($this->nota3, 2, ',', '.') . "</li>
+        <li><strong>Média Final: " . number_format($media, 2, ',', '.') . " ({$status})</strong></li>
+    </ul>
+    ";
     }
 }

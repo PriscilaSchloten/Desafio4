@@ -96,7 +96,7 @@ class Estoque
 
         return $this->getNomeProduto() . " tem um total de " . $this->getQuantidadeEstoque() . " em estoque <br>
         total em valor: $valorTotalEntrada <br>
-        preço por peça: " . $this->getValorUnitario();
+        preço por produto: " . $this->getValorUnitario();
 
     }
 }
